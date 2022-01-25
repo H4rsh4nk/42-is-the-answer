@@ -145,7 +145,7 @@ void real_algo(float weight){
 }
 
 int main() {
-    string input_file  = "e_elaborate.in.txt";
+    string input_file  = "input/e_elaborate.in.txt";
     getting_inputs(input_file);
 
 
@@ -160,7 +160,7 @@ int main() {
     // cout << endl;
 
     //Save to output file-------------------
-    // ofstream MyFile("response.txt");
+    // ofstream MyFile("harshank_playground/response.txt");
     // MyFile << TotalLikeIgrediants.size();
     // for (auto it : TotalLikeIgrediants)
     //     MyFile << " " <<  it;

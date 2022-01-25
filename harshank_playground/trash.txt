@@ -1,0 +1,28 @@
+Unique liked ingrediants: 9
+akuof byyii dlust luncl qzfyo tfeej vxglq xdozp xveqd 
+
+
+Unique dis-liked ingrediants: 6
+akuof byyii qzfyo sunhp xdozp xveqd 
+
+akuof 3 1
+byyii 3 0
+dlust 6 0
+xdozp 2 1
+luncl 5 0
+qzfyo 2 0
+vxglq 4 0
+xveqd 2 1
+tfeej 3 0
+sunhp 0 0
+
+
+RESULT : akuof byyii dlust luncl tfeej vxglq xveqd 
+
+
+we first need sorting according to dislike/like ration -ez
+
+store as cutomer[id]->like and cutomer[id]->dislike 
+then we go and remove and update data :
+    1. minus dislikes 
+    2. see the discarded customer //how
