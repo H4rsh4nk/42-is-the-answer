@@ -145,7 +145,7 @@ void real_algo(float weight){
 }
 
 int main() {
-    string input_file  = "input/e_elaborate.in.txt";
+    string input_file  = "input_data/e_elaborate.in.txt";
     getting_inputs(input_file);
 
 
