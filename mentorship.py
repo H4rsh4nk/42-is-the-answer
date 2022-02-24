@@ -9,16 +9,18 @@ skills = dict()
 
 for i in range(int(n_contributors)):
     temp_contributor, n_skills = file1.readline().rstrip().split()
-    contributors[temp_contributor]=[]
+    contributors[temp_contributor]=dict()
     for j in range(int(n_skills)):
         temp_skill, temp_level = file1.readline().rstrip().split()
-        contributors[temp_contributor].append([temp_skill,temp_level])
+        contributors[temp_contributor][temp_skill]=temp_level
 
 for i in range(int(n_projects)):
     name, days, score, deadline, roles = file1.readline().rstrip().split()
-    projects[name]=[]
+    projects[name]=dict()
     for j in range(int(roles)):
-        projects[name].append(file1.readline().rstrip().split())
+        p_skill,p_level = file1.readline().rstrip().split()
+        projects[name][p_skill]=p_level
+
 
 
 
@@ -29,12 +31,12 @@ result=dict()
 
 for name in projects.keys():
     temp_contributors=[]
-    for skill,level in projects[name]:
+    for skill,level in projects[name].items():
         flag=0
         for contributor_name, skill_list in contributors.items():
-            for skill_item in skill_list:
-                if skill_item[0] == skill and skill_item[1] >= level:
-                    
+            for skill_name,skill_level in skill_list.items():
+                if skill_name == skill and skill_level >= level:
+
                     temp_contributors.append(contributor_name)
                     flag=1
         if not flag:
@@ -42,6 +44,8 @@ for name in projects.keys():
     if not flag:
         continue
     result[name]=temp_contributors
+    # for p_contributor in result[name]:
+    #     if contributors[p_contributor][]
 
 print('result: ',result)
 
